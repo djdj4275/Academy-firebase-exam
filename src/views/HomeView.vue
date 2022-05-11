@@ -1,18 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>시작페이지</h1>
+    <a @click="fnDoGoogleLogin_Popup">구글 로그인</a>
+    <a href="/login">이메일 로그인</a>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
+  methods : {
+    fnDoGoogleLogin_Popup() {
+      this.$store.dispatch('fnDoGoogleLogin_Popup');
+    }
   }
 }
 </script>
